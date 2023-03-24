@@ -23,6 +23,18 @@ public class TextMaximum {
         return Math.max(x, Math.max(y, z));
     }
 
+
+    public static String findMax(String s1, String s2, String s3) {
+        String max = s1;
+        if (s2.compareTo(max) > 0) {
+            max = s2;
+        }
+        if (s3.compareTo(max) > 0) {
+            max = s3;
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
         // Test Case 1: max number at 1st position
         int max1 = findMaxInteger(10, 5, 3); // expected output: 10
@@ -39,6 +51,29 @@ public class TextMaximum {
         System.out.println(findMaximum(10.5f, 7.2f, 3.8f)); // expected output: 10.5
         System.out.println(findMaximum(2.1f, 9.6f, 5.3f)); // expected output: 9.6
         System.out.println(findMaximum(4.9f, 1.2f, 8.5f)); // expected output: 8.5
+
+
+
+        // Test case 1
+        String s1 = "Apple";
+        String s2 = "Peach";
+        String s3 = "Banana";
+        String max = findMax(s1, s2, s3);
+        System.out.println("Test case 1: The maximum string is " + max);
+
+        // Test case 2
+        s1 = "Cat";
+        s2 = "Dog";
+        s3 = "Elephant";
+        max = findMax(s1, s2, s3);
+        System.out.println("Test case 2: The maximum string is " + max);
+
+        // Test case 3
+        s1 = "Monday";
+        s2 = "Wednesday";
+        s3 = "Friday";
+        max = findMax(s1, s2, s3);
+        System.out.println("Test case 3: The maximum string is " + max);
 
 
     }
